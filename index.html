@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODIN - Open Source Command & Control Information System</title>
+    <meta name="description" content="ODIN is a free, open-source C2IS for tactical mapping and coordination. Offline-first, cross-platform, and built for real-world operations.">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/syncpoint/ODINv2/main/build/icons/32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/syncpoint/ODINv2/main/build/icons/16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/syncpoint/ODINv2/main/build/icons/180x180.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="https://raw.githubusercontent.com/syncpoint/ODINv2/main/build/icons/64x64.png" alt="ODIN" class="logo-icon">
+                <span class="logo-text">ODIN</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#why-odin">Why ODIN</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="https://github.com/syncpoint/ODINv2" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#download" class="btn btn-primary btn-sm">Get Started</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">Open Source C2IS</div>
+                    <h1 class="hero-title">
+                        Command & Control<br>
+                        <span class="gradient-text">Without Compromise</span>
+                    </h1>
+                    <p class="hero-description">
+                        ODIN is a free, open-source Command and Control Information System.
+                        Built for tactical mapping, situational awareness, and distributed coordination —
+                        with or without an internet connection.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary btn-lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download for Free
+                        </a>
+                        <a href="https://github.com/syncpoint/ODINv2" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Free & Open Source</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Platforms Supported</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">AGPL-3.0</span>
+                            <span class="stat-label">License</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <a href="images/screenshot-full.jpg" class="screenshot-link" aria-label="View full-size screenshot">
+                            <img src="images/screenshot-thumb.jpg" alt="ODIN tactical mapping application showing military symbols and tactical graphics on a topographic map" class="hero-screenshot">
+                        </a>
+                    </div>
+                </div>
+                <!-- Lightbox for full-size screenshot -->
+                <div class="lightbox" id="lightbox">
+                    <button class="lightbox-close" aria-label="Close">&times;</button>
+                    <img src="images/screenshot-full.jpg" alt="ODIN tactical mapping application - full size">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Built for the Field</h2>
+                    <p class="section-description">
+                        Everything you need for tactical planning and coordination,
+                        designed to work in challenging environments.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">MIL-STD-2525C Symbology</h3>
+                        <p class="feature-description">
+                            Full support for military standard symbols. Drag, drop, and position
+                            tactical graphics with intuitive controls.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Offline-First</h3>
+                        <p class="feature-description">
+                            Self-host your map tiles and search services. ODIN works reliably
+                            without an internet connection.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Real-Time Collaboration</h3>
+                        <p class="feature-description">
+                            Built on the Matrix ecosystem for distributed, federated coordination
+                            across teams and locations.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Flexible Data Sources</h3>
+                        <p class="feature-description">
+                            Import WMTS, WMS, and GeoJSON layers. Export your work in standard
+                            formats for interoperability.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 20h9"/>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Productive Editing</h3>
+                        <p class="feature-description">
+                            Copy/paste, undo/redo, and tags for organizing layers. Link features
+                            to external URLs to extend your data without complexity.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Cross-Platform</h3>
+                        <p class="feature-description">
+                            Available for Windows, macOS, and Linux. Use it on the hardware
+                            you already have.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why ODIN Section -->
+        <section id="why-odin" class="why-odin">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-content">
+                        <h2 class="section-title">Why Choose ODIN?</h2>
+                        <p class="why-intro">
+                            In a world of expensive, proprietary C2 systems with vendor lock-in,
+                            ODIN offers a different path.
+                        </p>
+                        <ul class="why-list">
+                            <li>
+                                <div class="why-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="why-item-content">
+                                    <strong>Full Transparency</strong>
+                                    <span>Open source under AGPL-3.0. Audit the code, understand what runs on your systems.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="why-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="why-item-content">
+                                    <strong>No Vendor Lock-In</strong>
+                                    <span>Your data stays yours. Export everything in standard formats anytime.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="why-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="why-item-content">
+                                    <strong>No Registration Required</strong>
+                                    <span>Download and start using ODIN immediately. No accounts, no tracking.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="why-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="why-item-content">
+                                    <strong>Self-Hosted Infrastructure</strong>
+                                    <span>Run your own map servers and services. True operational independence.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="why-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div class="why-item-content">
+                                    <strong>Community Driven</strong>
+                                    <span>Developed with input from real users. Feature requests and contributions welcome.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="why-visual">
+                        <div class="comparison-card comparison-highlight">
+                            <div class="comparison-header">
+                                <span>ODIN</span>
+                            </div>
+                            <ul class="comparison-list comparison-positive">
+                                <li>Free forever</li>
+                                <li>Open standards</li>
+                                <li>Fully auditable</li>
+                                <li>Air-gapped</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-card">
+                            <div class="comparison-header">
+                                <span>Proprietary C2IS</span>
+                            </div>
+                            <ul class="comparison-list comparison-negative">
+                                <li>Expensive licensing fees</li>
+                                <li>Vendor lock-in</li>
+                                <li>Closed source</li>
+                                <li>Black box security</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get ODIN</h2>
+                    <p class="section-description">
+                        Download the latest version for your platform. No registration required.
+                    </p>
+                </div>
+                <div class="download-grid">
+                    <a href="https://github.com/syncpoint/ODINv2/releases" class="download-card" target="_blank" rel="noopener">
+                        <div class="download-content">
+                            <h3>Windows</h3>
+                            <p>Windows 10 or later</p>
+                        </div>
+                        <div class="download-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://github.com/syncpoint/ODINv2/releases" class="download-card" target="_blank" rel="noopener">
+                        <div class="download-content">
+                            <h3>macOS</h3>
+                            <p>macOS 10.15 or later</p>
+                        </div>
+                        <div class="download-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://github.com/syncpoint/ODINv2/releases" class="download-card" target="_blank" rel="noopener">
+                        <div class="download-content">
+                            <h3>Linux</h3>
+                            <p>AppImage format</p>
+                        </div>
+                        <div class="download-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://snapcraft.io/odin-v2" class="download-card" target="_blank" rel="noopener">
+                        <div class="download-content">
+                            <h3>Snap Store</h3>
+                            <p>Auto-updating Linux package</p>
+                        </div>
+                        <div class="download-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                <polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <p class="download-note">
+                    Current version: <strong>3.1.0</strong> ·
+                    <a href="https://github.com/syncpoint/ODINv2/releases" target="_blank" rel="noopener">View all releases</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="community">
+            <div class="container">
+                <div class="community-content">
+                    <h2 class="section-title">Join the Community</h2>
+                    <p class="section-description">
+                        ODIN is built by a community of contributors. Whether you want to report bugs,
+                        suggest features, or contribute code, we'd love to have you.
+                    </p>
+                    <div class="community-links">
+                        <a href="https://github.com/syncpoint/ODINv2" class="community-link" target="_blank" rel="noopener">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://matrix.to/#/#ODIN.Community:syncpoint.io" class="community-link" target="_blank" rel="noopener">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M.632.55v22.9H2.28V24H0V0h2.28v.55zm7.043 7.26v1.157h.033c.309-.443.683-.784 1.117-1.024.433-.245.936-.365 1.5-.365.54 0 1.033.107 1.481.314.448.208.785.582 1.02 1.108.254-.374.6-.706 1.034-.992.434-.287.95-.43 1.546-.43.453 0 .872.056 1.26.167.388.11.716.286.993.53.276.245.489.559.646.951.152.392.23.863.23 1.417v5.728h-2.349V11.52c0-.286-.01-.559-.032-.812a1.755 1.755 0 00-.18-.66 1.106 1.106 0 00-.438-.448c-.194-.11-.457-.166-.789-.166-.332 0-.6.064-.803.189a1.38 1.38 0 00-.48.499 1.946 1.946 0 00-.231.696 5.56 5.56 0 00-.06.785v4.768h-2.35v-4.8c0-.254-.004-.503-.018-.752a2.074 2.074 0 00-.143-.688 1.052 1.052 0 00-.415-.503c-.194-.125-.476-.19-.854-.19-.111 0-.259.024-.439.074-.18.051-.36.143-.53.282-.171.138-.319.33-.439.57-.12.24-.18.567-.18.97v5.037H4.951V7.81zm14.693 14.39v-22.9H21.72V0H24v24h-2.28v-.55z"/>
+                            </svg>
+                            Matrix Chat
+                        </a>
+                        <a href="mailto:office@syncpoint.io" class="community-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="https://raw.githubusercontent.com/syncpoint/ODINv2/main/build/icons/64x64.png" alt="ODIN" class="logo-icon">
+                        <span class="logo-text">ODIN</span>
+                    </div>
+                    <p>Open Source Command & Control Information System</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#download">Download</a></li>
+                            <li><a href="https://github.com/syncpoint/ODINv2/releases" target="_blank" rel="noopener">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/syncpoint/ODINv2/tree/main/docs" target="_blank" rel="noopener">Documentation</a></li>
+                            <li><a href="https://github.com/syncpoint/ODINv2/issues" target="_blank" rel="noopener">Report Issue</a></li>
+                            <li><a href="https://github.com/syncpoint/ODINv2/blob/master/LICENSE" target="_blank" rel="noopener">License</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="https://github.com/syncpoint/ODINv2" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://matrix.to/#/#ODIN.Community:syncpoint.io" target="_blank" rel="noopener">Matrix Chat</a></li>
+                            <li><a href="mailto:office@syncpoint.io">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <a href="https://syncpoint.io" target="_blank" rel="noopener">Syncpoint GmbH</a>. ODIN is released under the AGPL-3.0 license.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
