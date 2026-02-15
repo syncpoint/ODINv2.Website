@@ -1,0 +1,69 @@
+name: Build and Deploy Website + Docs
+
+on:
+  repository_dispatch:
+    types: [release-published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+
+      - name: Checkout ODINv2 repo (for docs source)
+        uses: actions/checkout@v4
+        with:
+          repository: syncpoint/ODINv2
+          path: ODINv2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install MkDocs Material
+        run: pip install mkdocs-material
+
+      - name: Build documentation
+        run: |
+          cd ODINv2/docs-src
+          mkdocs build --site-dir ../../_build/docs
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          # Copy landing page
+          cp index.html _site/
+          cp styles.css _site/
+          cp script.js _site/
+          cp -r images/ _site/images/ 2>/dev/null || true
+          cp CNAME _site/ 2>/dev/null || true
+          # Copy built docs
+          cp -r _build/docs _site/docs
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
