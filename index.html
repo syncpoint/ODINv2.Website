@@ -148,8 +148,21 @@
                         </div>
                         <h3 class="feature-title">Real-Time Collaboration</h3>
                         <p class="feature-description">
-                            Built on the Matrix ecosystem for distributed, federated coordination
-                            across teams and locations.
+                            Built on the <a href="https://matrix.org" target="_blank" rel="noopener">Matrix</a> protocol for distributed, federated coordination
+                            across teams and organisations — with no central authority.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">End-to-End Encrypted</h3>
+                        <p class="feature-description">
+                            All collaboration data encrypted by default using Megolm/Olm —
+                            the same proven crypto stack used by Signal. Not even the server can read your data.
                         </p>
                     </div>
                     <div class="feature-card">
@@ -190,6 +203,118 @@
                             Available for Windows, macOS, and Linux. Use it on the hardware
                             you already have.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E2EE Section -->
+        <section id="encryption" class="e2ee-section">
+            <div class="container">
+                <div class="e2ee-grid">
+                    <div class="e2ee-content">
+                        <div class="hero-badge">New in v3.3</div>
+                        <h2 class="section-title">End-to-End Encryption</h2>
+                        <p class="e2ee-intro">
+                            ODIN now encrypts all collaboration data by default. Your operational plans,
+                            tactical graphics, and situational data are protected with military-grade
+                            cryptography — from the moment they leave your device until they reach
+                            your team members.
+                        </p>
+                        <div class="e2ee-features">
+                            <div class="e2ee-item">
+                                <div class="e2ee-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Zero-Knowledge Architecture</strong>
+                                    <p>Encryption keys never leave your devices. Not the server operator, not the network provider, not even Syncpoint can read your data.</p>
+                                </div>
+                            </div>
+                            <div class="e2ee-item">
+                                <div class="e2ee-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Proven Cryptography</strong>
+                                    <p>Megolm/Olm — the same audited crypto stack used by Signal, Element, and adopted by NATO, the German Bundeswehr, and the French government.</p>
+                                </div>
+                            </div>
+                            <div class="e2ee-item">
+                                <div class="e2ee-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="8.5" cy="7" r="4"/>
+                                        <line x1="20" y1="8" x2="20" y2="14"/>
+                                        <line x1="23" y1="11" x2="17" y2="11"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Seamless Key Sharing</strong>
+                                    <p>When new members join, encryption keys are securely shared via encrypted channels. Full access to project history without compromising security.</p>
+                                </div>
+                            </div>
+                            <div class="e2ee-item">
+                                <div class="e2ee-item-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <strong>Device Verification</strong>
+                                    <p>SAS emoji comparison to verify device identity and prevent man-in-the-middle attacks. Trust is established between devices, not accounts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="e2ee-visual">
+                        <div class="e2ee-diagram">
+                            <div class="e2ee-node e2ee-device">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                                <span>Your Device</span>
+                            </div>
+                            <div class="e2ee-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <span>Encrypted</span>
+                            </div>
+                            <div class="e2ee-node e2ee-server">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                    <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                    <line x1="6" y1="18" x2="6.01" y2="18"/>
+                                </svg>
+                                <span>Matrix Server</span>
+                                <small>Cannot read data</small>
+                            </div>
+                            <div class="e2ee-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                <span>Encrypted</span>
+                            </div>
+                            <div class="e2ee-node e2ee-device">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                    <line x1="8" y1="21" x2="16" y2="21"/>
+                                    <line x1="12" y1="17" x2="12" y2="21"/>
+                                </svg>
+                                <span>Team Member</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -351,7 +476,7 @@
                     </a>
                 </div>
                 <p class="download-note">
-                    Current version: <strong>3.2.0</strong> ·
+                    Current version: <strong>3.3.0</strong> ·
                     <a href="https://github.com/syncpoint/ODINv2/releases" target="_blank" rel="noopener">View all releases</a>
                 </p>
             </div>
@@ -430,7 +555,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 <a href="https://syncpoint.io" target="_blank" rel="noopener">Syncpoint GmbH</a>. ODIN is released under the AGPL-3.0 license.</p>
+                <p>&copy; 2026 <a href="https://syncpoint.io" target="_blank" rel="noopener">Syncpoint GmbH</a>. ODIN is released under the AGPL-3.0 license.</p>
             </div>
         </div>
     </footer>
